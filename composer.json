@@ -1,0 +1,21 @@
+{
+    "name": "sergiosgc/translation",
+    "description": "Translation package for PHP apps",
+    "keywords": ["i80n", "l10n", "internationalization", "localization", "translation"],
+    "homepage": "https://github.com/sergiosgc/crud-trait",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Sérgio Carvalho",
+            "homepage": "https://github.com/sergiosgc"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "files": [ "autoload/functions.php" ],
+        "psr-4": {"sergiosgc\\": "sergiosgc/"}
+    }
+}
