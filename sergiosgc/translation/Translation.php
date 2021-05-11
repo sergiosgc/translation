@@ -14,6 +14,13 @@ class Translation {
         return static::$singleton ?? (static::$singleton = new Translation());
 
     }
+    public function setLocale($locale) {
+        $language = strtolower($locale);
+        $territory = '';
+        if (strpos($language, '_')) list($language, $territory) = explode('_', $language, 2);
+        $this->language = $language;
+        $this->territory = $territory;
+    }
     public function setGetDatabase(callable $_getDb) : void {
         $this->_getDb = $_getDb;
     }
