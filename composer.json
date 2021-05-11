@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "sergiosgc/crud-trait": "dev-master"
     },
     "autoload": {
         "files": [ "autoload/functions.php" ],
