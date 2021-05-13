@@ -62,7 +62,7 @@ You need to setup the package when the application starts:
 
 Then, at some point set the locale:
 
-        \sergiosgc\translation\Translation::singleton()->setLocale('pt_PT');
+    \sergiosgc\translation\Translation::singleton()->setLocale('pt_PT');
 
 ## Usage
 
