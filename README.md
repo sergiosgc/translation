@@ -68,12 +68,12 @@ Then, at some point set the locale:
 
 Usage is similar to gettext. Use `__()`:
 
-        print(__('This will be translated'));
+    print(__('This will be translated'));
 
 If \sergiosgc\sprintf is installed, you may use `__()` with the `\sergiosgc\sprintf()` signature:
 
-        print(__('This will be processed by %<package> after translation', [ 'package' => '\sergiosgc\sprintf' ]));
+    print(__('This will be processed by %<package> after translation', [ 'package' => '\sergiosgc\sprintf' ]));
         
 The `print(__())` pattern can be condensed using `__p()`:
 
-        __p('This will be processed by %<package> after translation', [ 'package' => '\sergiosgc\sprintf' ]);
+    __p('This will be processed by %<package> after translation', [ 'package' => '\sergiosgc\sprintf' ]);
