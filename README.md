@@ -59,3 +59,17 @@ You need to setup the package when the application starts:
        \sergiosgc\translation\Translation::singleton()->setGetDatabase([ '\app\App', 'getDatabase' ]);
        // Pass in a \sergiosgc\translation\ICache
        \sergiosgc\translation\Translation::singleton()->setCache( new \sergiosgc\translation\RedisCache('localhost', 6379 ));
+
+Then, at some point set the locale:
+
+        \sergiosgc\translation\Translation::singleton()->setLocale('pt_PT');
+
+## Usage
+
+Usage is similar to gettext. Use `__()`:
+
+        print(__('This will be translated'));
+
+If \sergiosgc\sprintf is installed, you may use `__()` with the `\sergiosgc\sprintf()` signature:
+
+        print(__('This will be processed by %<package> after translation', [ 'package' => '\sergiosgc\sprintf' ]));
