@@ -4,3 +4,6 @@ function __($message, ...$args) {
     if (class_exists('sergiosgc\sprintf', true)) $message = \sergiosgc\sprintf($message, ...$args);
     return $message;
 }
+function __p($message, ...$args) {
+    print(__($message, ---$args));
+}
