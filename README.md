@@ -8,6 +8,7 @@ This is a composer package providing translation support for PHP applications. I
 ## Installation
 
 Install via composer. In you composer.json:
+
     {
         "repositories": [
             ...
