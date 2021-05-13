@@ -5,6 +5,23 @@ This is a composer package providing translation support for PHP applications. I
 * Translation cache in a keystore is supported (memcache or Redis usage is expected)
 * The __() function (similar to gettext's \_()) supports \sergiosgc\sprintf style calls if sergiosgc-sprintf is present; e.g. `__('Operator name set to %<name>', $operator)`
 
+## Installation
+
+Install via composer. In you composer.json:
+    {
+        "repositories": [
+            ...
+            {
+                "type": "vcs",
+                "url": "https://github.com/sergiosgc/translation"
+            }
+        ],
+        "require": {
+            ...
+            "sergiosgc/translation": "*"
+        }
+    }
+
 ## Database schema
 
 Two tables, string and translation, in schema localization:
