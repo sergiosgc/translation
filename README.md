@@ -47,3 +47,12 @@ and
      value            | text    |           |          | 
     Indexes:
         "translation_pkey" PRIMARY KEY, btree (string, locale_language, locale_territory)
+        
+## Application setup
+
+You need to setup the package when the application starts:
+1. Give it a callback to obtain the database connection (a PDO object)
+2. Provide a cache adapter object
+
+    \sergiosgc\translation\Translation::singleton()->setGetDatabase([ '\app\App', 'getDatabase' ]); // Pass in a callable that returns a PDO connection
+    \sergiosgc\translation\Translation::singleton()->setCache( new \sergiosgc\translation\RedisCache('localhost', 6379 )); // Pass in a \sergiosgc\translation\ICache
