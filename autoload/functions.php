@@ -8,6 +8,6 @@ function __($message, ...$args) {
 }
 if (!function_exists('__p')) {
 function __p($message, ...$args) {
-    print(__($message, ---$args));
+    print(__($message, ...$args));
 }
 }
