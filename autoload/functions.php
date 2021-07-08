@@ -2,7 +2,9 @@
 if (!function_exists('__')) {
 function __($message, ...$args) {
     $message = \sergiosgc\translation\Translation::singleton()->translate($message);
-    if (class_exists('sergiosgc\sprintf', true)) $message = \sergiosgc\sprintf($message, ...$args);
+    if (function_exists('sergiosgc\sprintf')) try {
+        $message = \sergiosgc\sprintf($message, ...$args);
+    } catch (\sergiosgc\MissingConversionSpecifierException $e) { }
     return $message;
 }
 }
