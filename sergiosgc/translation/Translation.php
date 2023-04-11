@@ -3,7 +3,7 @@ namespace sergiosgc\translation;
 
 class Translation {
     static ?Translation $singleton = null;
-    public ?mixed $_getDb = null;
+    public mixed $_getDb = null;
     public ICache $cache;
     public $language = 'pt';
     public $territory = 'pt';
